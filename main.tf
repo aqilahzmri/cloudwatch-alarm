@@ -43,13 +43,14 @@ resource "aws_lambda_function" "alarm_email_function" {
   description      = "CloudWatch alarms email formatter"
   timeout          = 60
   role             = aws_iam_role.lambda_role.arn
-  source_code_hash = filebase64sha256("lambda_send_email.zip")
-  filename        = "lambda_send_email.zip"
+  source_code_hash = filebase64sha256("cwalarm-formatted-email-lambda.py")
+  s3_bucket        = "hanabucket"
+  s3_key           = "cwalarm-formatted-email-lambda.py"
 
   environment {
     variables = {
-      EMAIL_SOURCE             = "devops@regovtech.com"
-      EMAIL_TO_ADDRESSES       = "devops@regovtech.com"
+      EMAIL_SOURCE             = "sre@regovtech.com"
+      EMAIL_TO_ADDRESSES       = "sre@regovtech.com"
       SES_TEMPLATE_CRITICAL    = "MetricsTemplate"
     }
   }
