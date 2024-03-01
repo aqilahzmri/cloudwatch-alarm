@@ -43,7 +43,6 @@ resource "aws_lambda_function" "alarm_email_function" {
   description      = "CloudWatch alarms email formatter"
   timeout          = 60
   role             = aws_iam_role.lambda_role.arn
-  source_code_hash = filebase64sha256("cwalarm-formatted-email-lambda.py")
   s3_bucket        = "hanabucket"
   s3_key           = "cwalarm-formatted-email-lambda.py"
 
