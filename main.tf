@@ -262,7 +262,7 @@ resource "aws_cloudwatch_metric_alarm" "devdb_cpu_alarm" {
   }
 }
 
-resource "aws_cloudwatch_metric_alarm" "burst_balance_too_low" {
+resource "aws_cloudwatch_metric_alarm" "devdb_burst_balance_too_low" {
   alarm_name          = "devdb_burst_balance"
   comparison_operator = "LessThanThreshold"
   evaluation_periods  = 1
@@ -278,7 +278,7 @@ resource "aws_cloudwatch_metric_alarm" "burst_balance_too_low" {
   }
 }
 
-resource "aws_cloudwatch_metric_alarm" "cpu_credit_balance_too_low" {
+resource "aws_cloudwatch_metric_alarm" "devdb_cpu_credit_balance_too_low" {
   alarm_name          = "devdb_cpu_credit_balance_too_low"
   comparison_operator = "LessThanThreshold"
   evaluation_periods  = 1
@@ -294,7 +294,7 @@ resource "aws_cloudwatch_metric_alarm" "cpu_credit_balance_too_low" {
   }
 }
 
-resource "aws_cloudwatch_metric_alarm" "disk_queue_depth_too_high" {
+resource "aws_cloudwatch_metric_alarm" "devdb_disk_queue_depth_too_high" {
   alarm_name          = "devdb_queue_depth_too_high"
   comparison_operator = "GreaterThanThreshold"
   evaluation_periods  = 1
@@ -310,7 +310,7 @@ resource "aws_cloudwatch_metric_alarm" "disk_queue_depth_too_high" {
   }
 }
 
-resource "aws_cloudwatch_metric_alarm" "freeable_memory_too_low" {
+resource "aws_cloudwatch_metric_alarm" "devdb_freeable_memory_too_low" {
   alarm_name          = "devdb_freeable_memory_too_low"
   comparison_operator = "LessThanThreshold"
   evaluation_periods  = 1
@@ -326,7 +326,7 @@ resource "aws_cloudwatch_metric_alarm" "freeable_memory_too_low" {
   }
 }
 
-resource "aws_cloudwatch_metric_alarm" "free_storage_space_too_low" {
+resource "aws_cloudwatch_metric_alarm" "devdb_free_storage_space_too_low" {
   alarm_name          = "devdb_free_storage_space_too_low"
   comparison_operator = "LessThanThreshold"
   evaluation_periods  = 1
@@ -342,7 +342,7 @@ resource "aws_cloudwatch_metric_alarm" "free_storage_space_too_low" {
   }
 }
 
-resource "aws_cloudwatch_metric_alarm" "swap_usage_too_high" {
+resource "aws_cloudwatch_metric_alarm" "devdb_swap_usage_too_high" {
   alarm_name          = "devdb_swap_usage_too_high"
   comparison_operator = "GreaterThanThreshold"
   evaluation_periods  = 1
