@@ -38,7 +38,7 @@ resource "aws_cloudwatch_log_group" "lambda_log_group" {
 
 resource "aws_lambda_function" "alarm_email_function" {
   function_name    = "alarm-email-function"
-  handler          = "cwalarm-formatted-email-lambda.lambda_handler"
+  handler          = "lambda_send_email.cwalarm-formatted-email-lambda.lambda_handler"
   runtime          = "python3.8"
   description      = "CloudWatch alarms email formatter"
   timeout          = 60
